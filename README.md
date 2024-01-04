@@ -5,15 +5,14 @@
 2. Файл savecommands.  
 
 ```mermaid
+%% схема изменения статусов файлов в Git
 graph LR;
-  untracked -- "git add" --> staged + tracked;
-  staged -- "git commit" --> tracked;
-  tracked -- "изменения" --> modified;
-  modified -- "git add" --> staged + tracked;
-  staged -- "изменения" --> tracked;
-  
+  untracked -- "git add"    --> staged+tracked;
+  staged    -- "git commit" --> tracked;
+  tracked   -- "изменения"  --> modified;
+  modified  -- "git add"    --> staged+tracked;
+  staged    -- "изменения"  --> tracked;
 ``` 
-
 ---
 Вообще мой основной репозиторий на [GitLab](https://gitlab.com/Belorad "Ivan Pertsev").  
 Как бы на этом пока всё.
